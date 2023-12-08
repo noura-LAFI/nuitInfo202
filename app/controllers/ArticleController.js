@@ -6,6 +6,9 @@ exports.create = async (req, res) => {
     const data = {
       titre: req.body.titre,
       description: req.body.description,
+      date: req.body.date,
+      image: req.body.image,
+      publisher: req.body.publisher,
     };
     await firestore.collection("Article").doc().set(data);
 
